@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio & Resume - M. Wildanun Mukholladun</title>
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- CSS Kustom -->
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="80" tabindex="0">
+
+  <!-- Container Penampung Section -->
+  <div id="section-navbar"></div>
+  <div id="section-hero"></div>
+  <div id="section-about"></div>
+  <div id="section-skill"></div>
+  <div id="section-project"></div>
+  <div id="section-contact"></div>
+  <div id="section-footer"></div>
+
+  <!-- JavaScript Penggabung File Komponen -->
+  <script>
+    async function loadComponent(elementId, filePath) {
+      try {
+        const response = await fetch(filePath);
+        if (response.ok) {
+          const content = await response.text();
+          document.getElementById(elementId).innerHTML = content;
+        } else {
+          console.error(`Gagal memuat ${filePath}`);
+        }
+      } catch (error) {
+        console.error(`Error memuat ${filePath}:`, error);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      await loadComponent("section-navbar", "components/navbar.html");
+      await loadComponent("section-hero", "components/hero.html");
+      await loadComponent("section-about", "components/about.html");
+      await loadComponent("section-skill", "components/skill.html");
+      await loadComponent("section-project", "components/project.html");
+      await loadComponent("section-contact", "components/contact.html");
+      await loadComponent("section-footer", "components/footer.html");
+    });
+  </script>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

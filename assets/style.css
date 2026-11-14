@@ -1,0 +1,66 @@
+:root {
+      --primary-color: #7533F9;
+      --primary-hover: #5d24d6;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-top: 70px;
+    }
+
+    /* Custom Theme Colors */
+    .bg-purple {
+      background-color: var(--primary-color) !important;
+    }
+    
+    .btn-purple {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+    
+    .btn-purple:hover {
+      background-color: var(--primary-hover);
+      color: #fff;
+    }
+
+    .text-purple {
+      color: var(--primary-color) !important;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 80px 0;
+    }
+
+    /* Avatar Statis (Tanpa Animasi) */
+    .profile-avatar {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Card Styling */
+    .card-project {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    /* Footer Hover Effects */
+    #footer a {
+      text-decoration: none;
+      color: #6c757d;
+      transition: color 0.2s ease;
+    }
+
+    #footer a:hover {
+      color: var(--primary-color) !important;
+      text-decoration: underline;
+    }
